@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import {Link} from 'react-router';
 
 export default ({ artists, go }) => (
   <div>
@@ -9,7 +10,7 @@ export default ({ artists, go }) => (
       {
         artists.map(artist => (
           <div className="list-group-item" key={ artist.id }>
-            <a href="#" onClick={() => go(artist)}>{ artist.name }</a>
+            <Link to={`/artists/${artist.id}`}>{ artist.name }</Link>
           </div>
         ))
       }

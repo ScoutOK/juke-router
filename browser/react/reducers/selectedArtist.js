@@ -3,7 +3,9 @@
 import { RECEIVE_ARTIST } from '../constants';
 import { convertArtist } from '../converters';
 
-const initialArtist = {};
+const initialArtist = {
+  albums: []
+};
 
 export default function artist (state = initialArtist, action) {
   switch (action.type) {
